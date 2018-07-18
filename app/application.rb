@@ -13,7 +13,7 @@ class Application
     elsif req.path.match(/cart/)
       @@cart.each do |cart|
         resp.write "#{cart}\n"
-      end 
+      end
     elsif req.path.match(/add/)
       item_to_add = req.params["p"
       resp.write add_cart(item_to_add)
@@ -42,5 +42,5 @@ class Application
       return "The item is not available"
     end
   end
-  
+
 end
