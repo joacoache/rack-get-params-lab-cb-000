@@ -15,7 +15,7 @@ class Application
         resp.write "#{cart}\n"
       end
     elsif req.path.match(/add/)
-      item_to_add = req.params["p"
+      item_to_add = req.params["p"]
       resp.write add_cart(item_to_add)
     elsif req.path.match(/search/)
       search_term = req.params["q"]
@@ -34,7 +34,7 @@ class Application
     end
   end
 
-  def add(item_to_add)
+  def add_cart(item_to_add)
     if @@items.include?(item_to_add)
       @@cart << item_to_add
       return "#{item_to_add} was added to the cart"
